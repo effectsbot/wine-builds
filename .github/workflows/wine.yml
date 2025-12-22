@@ -4,7 +4,7 @@ permissions:
   contents: write
   pull-requests: read
 env:
-  WINE_VERSION: "10.20"
+  WINE_VERSION: "11.0-rc3"
 jobs:
   build:
     runs-on: ubuntu-latest
