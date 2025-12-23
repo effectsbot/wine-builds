@@ -4,7 +4,7 @@ permissions:
   contents: write
   pull-requests: read
 env:
-  WINE_VERSION: "11.0-rc3"
+  WINE_VERSION: "master"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,8 +21,7 @@ jobs:
 
     - name: Fetch sources
       run: |
-        git clone https://gitlab.winehq.org/wine/wine.git --depth 1 \
-          --branch wine-${{ env.WINE_VERSION }}
+        git clone https://gitlab.winehq.org/wine/wine.git --depth 1
 
     - name: Apply patches
       run: |
